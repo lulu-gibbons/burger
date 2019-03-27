@@ -14,7 +14,7 @@ router.get('/', function(req, res) {
   //passing burger_data into the function
   burger.all(function(burger_data){
     console.log(burger_data);
-    res.render("index");
+    res.render("index", {burger_data});
   })
 });
 
