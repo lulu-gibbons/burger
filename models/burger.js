@@ -8,18 +8,20 @@ var burger = {
     orm.all('burgers', function(res) {
       cb(res);
     });
-  }//,
-  // // The variables cols and vals are arrays.
-  // create: function(cols, vals, cb) {
-  //   orm.create("cats", cols, vals, function(res) {
-  //     cb(res);
-  //   });
-  // },
-  // update: function(objColVals, condition, cb) {
-  //   orm.update("cats", objColVals, condition, function(res) {
-  //     cb(res);
-  //   });
-  // }
+  },
+  update: function(id, cb) {
+    //calling orm.update and passing in burgers table & the id...then use a callback function
+    orm.update('burgers', id, function(res) {
+      cb(res);
+    });
+  },
+  // The variables cols and vals are arrays.
+  create: function(name, cb) {
+    //calling orm.create and passing in burgers table & the name...then use a callback function
+    orm.create('burgers', name, function(res) {
+      cb(res);
+    });
+  }
 };
 
 // Export the database functions for the controller (burgers_controller.js).
