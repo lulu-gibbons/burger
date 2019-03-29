@@ -1,7 +1,17 @@
+/* Google Fonts
+font-family: 'Permanent Marker', cursive;
+font-family: 'Patrick Hand', cursive;
+font-family: 'Roboto', sans-serif;
+---------------------------------------- */
+
 pre {
   display: block;
   white-space: pre-wrap;
   margin: auto 0;
+}
+
+.burger-names {
+  margin: 5px;
 }
 
 .devour-style {
@@ -13,9 +23,22 @@ pre {
   float: left;
 }
 
-#title {
+h1 {
   padding-top: 25px;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 36px;
 }
+
+.burger-names {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 26px;
+}
+
+h3{
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}
+
 #burger-image {
   width: 200px;
 
@@ -27,4 +50,9 @@ pre {
 
 #submit-form {
   padding-top: 50px;
+}
+
+.btn-block {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
