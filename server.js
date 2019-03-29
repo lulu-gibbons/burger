@@ -1,3 +1,4 @@
+const http = require('http');
 var bodyParser = require('body-parser'); //translates everything into the same language so back and front can easily communicate
 var express = require('express');
 var exphbs = require('express-handlebars');
