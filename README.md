@@ -19,8 +19,8 @@ This app is powered by three **NPM packages**.
    * [Express](https://www.npmjs.com/package/express)
    * [Express-handlebars](https://www.npmjs.com/package/express-handlebars)
    * [Body-parser](https://www.npmjs.com/package/body-parser)
-   * [mysql](https://www.npmjs.com/package/mysql)
-   * [method-override](https://www.npmjs.com/package/mysql)
+   * [MySQL](https://www.npmjs.com/package/mysql)
+   * [Method-override](https://www.npmjs.com/package/mysql)
 
 
 **Link to working app in Heroku:** https://gibbons-burgers.herokuapp.com/
