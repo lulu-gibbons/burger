@@ -1,31 +1,42 @@
-<div class="container">
-	<div class="row">
+<div class="jumbotron jumbotron-fluid">
+	<div class="container justify-content-center">
 		<div class="col-xs-12 text-center" id="top-bar">
 			<img src="/assets/img/hamburger.png" alt="burger" id="burger-image" />
-			<h1> Eat-Da-Burger! </h1>
+			<h1 id="title"> Eat-Da-Burger! </h1>
 		</div>
 	</div>
+</div>
+<div class="container">
 	<div class="row">
-		<div class="col-xs-6 text-center" class="task">
-			<div class="row">
+		<div class="col-8">
 			  {{#each burger_data}}
 			  	{{#unless this.devoured}}
-				<div class="col-xs-9 text-center">
-					<pre>
-					{{this.id}}. {{this.burger_name}}
-					</pre>
-				</div>
-				<div class="col-xs-3 text-center">
-					<form method="POST" action="/burgers/update?_method=PUT" class="button-size">
-						<input input type="hidden" type="text" name="burger_id" value={{this.id}}><br>
-						<button type="submit" class="btn btn-default">Devour it!</button>
+
+					<!-- {{this.id}}. {{this.burger_name}} -->
+
+					<form method="POST" action="/burgers/update?_method=PUT" class="devour-buttons">
+						<!-- <input input type="hidden" type="text" name="burger_id" value={{this.id}}><br>
+						<button type="submit" class="btn btn-outline-secondary">Devour it!</button> -->
+
+						<div class="input-group">
+						 <li class="form-control">
+							 {{this.id}}. {{this.burger_name}}
+						 </li>
+							 <span class="input-group-btn">
+								 <input input type="hidden" type="text" name="burger_id" value={{this.id}}><br>
+								 <button type="submit" class="btn btn-outline-secondary">Devour It!</button>
+							 </span>
+					 </div>
+
+
 					</form>
-				</div>
+
 				{{/unless}}
 			  {{/each}}
 			</div>
-		</div>
-		<div class="col-xs-6 text-center" class="task">
+
+		<div class="col-4 devour-style">
+			<h2>DEVOURED!</h2>
 			  {{#each burger_data}}
 			  	{{#if this.devoured}}
 			  		<input class="form-control" type="text" placeholder="{{this.id}}. {{this.burger_name}}" readonly>
@@ -35,9 +46,9 @@
 	</div>
 </div>
 
-<div class="container">
-	<div class="row">
-		<div class="col-xs-12 text-center enter_section">
+<div class="container" id="submit-form">
+	<div class="row justify-content-center">
+		<div class="col-xs-12">
 			<form action="/burgers/create" method="POST">
 				<input type="text" class="form-control" name="burger_name" value="" id="enter_text">
 				<button type="submit" class="btn btn-primary">Submit</button>
